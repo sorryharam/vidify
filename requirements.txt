@@ -1,0 +1,4 @@
+PyQt5>=5.15.0
+yt-dlp>=2025.3.31
+setuptools>=42.0.0
+requests>=2.30.0

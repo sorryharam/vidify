@@ -1,0 +1,547 @@
+/* 
+------------------------------------------------------------------------------------------------------------------------
+  БАЗОВЫЕ СТИЛИ
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+/* Общие стили для всего приложения */
+* {
+    font-family: 'Monocraft';
+    font-size: 24px;
+    font-weight: normal;
+}
+
+QWidget {
+    font-family: 'Monocraft' !important;
+    font-size: 24px !important;
+    font-weight: normal !important;
+    color: #e2e8f0;
+}
+
+/* Главное окно */
+QMainWindow {
+    background-color: #101010;
+    border: none;
+}
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+  ВКЛАДКИ И ПАНЕЛИ
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+/* Контейнер вкладок */
+QTabWidget::pane {
+    border-top: 10px groove #555555;
+    background-color: #181818;
+}
+
+QTabBar {
+    background-color: #181818;
+}
+
+/* Неактивная вкладка */
+QTabBar::tab {
+    background: #222222;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 16px 12px 0;
+    width: 200px;
+    height: 50px;
+    color: #a0a0a0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    font-family: 'Monocraft';
+    font-size: 24px;
+    font-weight: normal;
+}
+
+QTabBar::tab:hover {
+    background: #333333;
+}
+
+/* Активная вкладка */
+QTabBar::tab:selected {
+    background: #555555;
+    color: white;
+    font-size: 26px;
+    font-weight: normal;
+    height: 56px;
+    margin-top: 10px;
+    width: 224px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-family: 'Monocraft';
+}
+
+/* Содержимое вкладок */
+#downloadTab, #videoEditTab, #videoConvertTab, #uploadTab, #monitoringTab, #accountTab {
+    background-color: transparent;
+    font-family: 'Monocraft';
+    font-size: 24px;
+    font-weight: normal;
+}
+
+/* Настройка шрифта для особых элементов */
+QPushButton, QLineEdit, QLabel, QComboBox, QProgressBar {
+    font-family: 'Monocraft';
+    font-size: 24px;
+    font-weight: normal;
+}
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+  СКРОЛЛБАРЫ
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+/* Вертикальный скроллбар */
+QScrollBar:vertical {
+    border: none;
+    background: #202020;
+    width: 10px;
+    margin: 0px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background: #555555;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* Горизонтальный скроллбар */
+QScrollBar:horizontal {
+    border: none;
+    background: #202020;
+    height: 10px;
+    margin: 0px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #555555;
+    min-width: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+  ОСНОВНЫЕ ЭЛЕМЕНТЫ УПРАВЛЕНИЯ
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+/* Метки */
+QLabel {
+    color: #e2e8f0;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+/* Кнопки - общие стили */
+QPushButton {
+    background-color: #666666;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: normal;
+    border: none;
+    outline: none;
+    min-height: 20px;
+}
+
+QPushButton:hover {
+    background-color: #777777;
+}
+
+QPushButton:pressed {
+    background-color: #555555;
+}
+
+QPushButton:disabled {
+    background-color: #282828;
+    color: #707070;
+}
+
+/* Поля ввода - общие стили */
+QLineEdit {
+    background-color: #202020;
+    border: 1px solid #404040;
+    border-radius: 6px;
+    padding: 8px;
+    color: #e2e8f0;
+    font-size: 14px;
+    selection-background-color: #555555;
+}
+
+QLineEdit:focus {
+    border: 1px solid #666666;
+}
+
+QLineEdit:disabled {
+    background-color: #282828;
+    color: #808080;
+}
+
+/* Выпадающие списки */
+QComboBox {
+    background-color: #202020;
+    selection-background-color: #555555;
+    color: #e2e8f0;
+    border: 1px solid #404040;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-width: 1px;
+    border-left-color: #404040;
+    border-left-style: solid;
+}
+
+QComboBox::down-arrow {
+    image: url(assets/down-arrow.png);
+    width: 12px;
+    height: 12px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #202020;
+    border: 1px solid #404040;
+    selection-background-color: #555555;
+    color: #e2e8f0;
+    border-radius: 0 0 6px 6px;
+}
+
+/* Прогресс-бар - общие стили */
+QProgressBar {
+    border: 1px solid #404040;
+    border-radius: 6px;
+    background-color: #202020;
+    color: #f8fafc;
+    text-align: center;
+    padding: 1px;
+}
+
+QProgressBar::chunk {
+    background-color: #5AC44C;
+    border-radius: 5px;
+}
+
+/* Переключатели */
+#switchBtn {
+    min-width: 60px;
+    max-width: 60px;
+    min-height: 25px;
+    color: #f1f5f9;
+    font-weight: normal;
+    border-radius: 12px;
+    background-color: #404040;
+}
+
+#switchBtn:checked {
+    background-color: #666666;
+    color: white;
+    font-weight: normal;
+}
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+  ГРУППЫ И ПАНЕЛИ
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+/* Группы элементов */
+QGroupBox {
+    background-color: #202020;
+    border-radius: 8px;
+    padding: 15px;
+    font-weight: normal;
+    color: white;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 5px 0 5px;
+}
+
+/* Рамки */
+QFrame {
+    border: none;
+}
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+  ВКЛАДКА СКАЧИВАНИЯ (#downloadTab)
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+/* Общие стили вкладки скачивания */
+#downloadTab QWidget, 
+#downloadTab QPushButton, 
+#downloadTab QLineEdit, 
+#downloadTab QLabel, 
+#downloadTab QProgressBar {
+    font-family: 'Monocraft';
+    font-size: 24px;
+    font-weight: normal;
+}
+
+#downloadTab QPushButton {
+    background-color: #666666;
+    color: white;
+    font-weight: normal;
+    border-radius: 8px;
+    padding: 2px;
+    height: 44px;
+}
+
+#downloadTab QPushButton:hover {
+    background-color: #777777;
+}
+
+#downloadTab QPushButton:pressed {
+    background-color: #555555;
+}
+
+#downloadTab QPushButton:disabled {
+    background-color: #282828;
+    opacity: 0.7;
+    color: #707070;
+}
+
+#downloadTab QLineEdit {
+    background-color: #202020;
+    border: 2px solid #444444;
+    border-radius: 8px;
+    padding: 12px;
+    color: #ffffff;
+    height: 40px;
+    margin-right: 0px;
+}
+
+#downloadTab QLineEdit:focus {
+    border: 2px solid #555555;
+    background-color: #252525;
+}
+
+#downloadTab QLabel {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Прогресс-бар скачивания */
+#downloadTab QProgressBar {
+    background-color: #202020;
+    border: 2px solid #444444;
+    border-radius: 12px;
+    padding: 0px;
+    font-size: 22px;
+    color: #fff;
+    margin: 10px 0;
+    min-height: 44px;
+    qproperty-alignment: 'AlignCenter';
+    line-height: 44px;
+}
+
+#downloadTab QProgressBar::chunk {
+    background-color: #5AC44C;
+    border-radius: 10px;
+}
+
+/* Специфические элементы скачивания */
+#urlInput {
+    font-family: 'Monocraft';
+    font-size: 24px;
+    font-weight: normal;
+    background-color: #202020;
+    color: white;
+    border: 1px solid #404040;
+    border-radius: 8px;
+    height: 40px;
+    padding: 0 15px;
+    width: 100%;
+}
+
+#urlInput:focus {
+    border: 2px solid #555555;
+    background-color: #252525;
+}
+
+#folderButton, #downloadButton, #openFolderButton {
+    font-family: 'Monocraft';
+    font-size: 20px;
+    font-weight: normal;
+    border-radius: 8px;
+    background-color: #666666;
+    color: white;
+    height: 40px;
+    padding: 2px;
+}
+
+#folderButton:hover, #downloadButton:hover, #openFolderButton:hover {
+    background-color: #777777;
+}
+
+#folderButton:pressed, #downloadButton:pressed, #openFolderButton:pressed {
+    background-color: #555555;
+}
+
+#cancelButton {
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: normal;
+    background-color: #666666;
+    color: white;
+    height: 40px;
+    padding: 0 5px;
+}
+
+#cancelButton:hover {
+    background-color: #777777;
+}
+
+#cancelButton:pressed {
+    background-color: #555555;
+}
+
+#folderButton:disabled, #downloadButton:disabled, #cancelButton:disabled, #openFolderButton:disabled {
+    background-color: #282828;
+    color: #707070;
+}
+
+#thumbnailContainer {
+    background-color: #181818;
+    border: 1px solid #404040;
+    border-radius: 14px;
+    padding: 0px;
+}
+
+#thumbnailLabel {
+    color: #a0a0a0;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+#videoTitle {
+    font-weight: normal;
+    font-size: 16px;
+    color: #ffffff;
+    background: transparent;
+    padding: 8px 0;
+    max-width: 320px;
+}
+
+#videoAuthor {
+    color: #e0e0e0;
+    font-size: 14px;
+    background: transparent;
+    padding-bottom: 12px;
+    max-width: 320px;
+}
+
+#downloadProgressBar {
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #202020;
+    color: white;
+    text-align: center;
+    height: 30px;
+}
+
+#downloadProgressBar::chunk {
+    background-color: #5AC44C;
+    border-radius: 4px;
+}
+
+#statusLabel {
+    color: #b0b0b0; 
+    font-size: 13px; 
+    padding: 10px 0;
+}
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+  ВКЛАДКА РЕДАКТИРОВАНИЯ ВИДЕО (#videoEditTab) 
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+/* Элементы панели редактирования */
+#FrameRowWidget, #BlurRowWidget, #BlurIntensityWidget, 
+#FlipRowWidget, #RotateRowWidget, #WatermarkRowWidget {
+    border-radius: 8px;
+    margin:0px;
+}
+
+#WatermarkRowWidget {
+    padding: 0;
+}
+
+#videoEditTab QLineEdit {
+    background-color: #202020;
+    border: 2px solid #444444;
+    border-radius: 8px;
+    padding: 12px;
+    color: #ffffff;
+    height: 40px;
+    margin-right: 20px;
+}
+
+#videoEditTab QLineEdit:focus {
+    border: 2px solid #555555;
+    background-color: #252525;
+}
+
+#videoEditTab QCheckBox, #videoEditTab QComboBox {
+    font-size: 18px;
+    padding: 2px 8px;
+}
+
+#videoEditTab QPushButton {
+    font-size: 20px;
+    padding: 8px 18px;
+    background-color: #555555;
+    border-radius: 8px;
+    color: white;
+    font-weight: normal;
+}
+
+#videoEditTab QPushButton:hover {
+    background-color: #696969;
+}
+
+#videoEditTab QPushButton:disabled {
+    background-color: #404040;
+    opacity: 0.7;
+}
+
+#videoEditTab QLabel {
+    background: none;
+    font-size: 24px;
+    font-weight: normal;
+    color: #e0e0e0;
+    min-width: 200px;
+    padding-bottom: 40px;
+}
+
+#videoEditTab QProgressBar {
+    font-size: 16px;
+    min-height: 28px;
+    padding: 0px;
+    line-height: 28px;
+} 
