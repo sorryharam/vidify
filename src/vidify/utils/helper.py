@@ -6,3 +6,8 @@ class Helper:
         for char in invalid_chars:
             filename = filename.replace(char, '_')
         return filename
+
+    @staticmethod
+    def get_file_extension(filename: str) -> str:
+        """Возвращает расширение файла."""
+        return filename.split('.')[-1] if '.' in filename else ''
